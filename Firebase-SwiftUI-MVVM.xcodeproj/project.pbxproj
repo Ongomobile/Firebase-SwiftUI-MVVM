@@ -45,6 +45,7 @@
 		10F44E542645F20D00CA1C98 /* Firebase-SwiftUI-MVVMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Firebase-SwiftUI-MVVMUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		10F44E582645F20D00CA1C98 /* Firebase_SwiftUI_MVVMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase_SwiftUI_MVVMUITests.swift; sourceTree = "<group>"; };
 		10F44E5A2645F20D00CA1C98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10F44E662645F32000CA1C98 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +76,7 @@
 		10F44E2F2645F20B00CA1C98 = {
 			isa = PBXGroup;
 			children = (
+				10F44E662645F32000CA1C98 /* README.md */,
 				10F44E3A2645F20B00CA1C98 /* Firebase-SwiftUI-MVVM */,
 				10F44E4C2645F20C00CA1C98 /* Firebase-SwiftUI-MVVMTests */,
 				10F44E572645F20D00CA1C98 /* Firebase-SwiftUI-MVVMUITests */,
