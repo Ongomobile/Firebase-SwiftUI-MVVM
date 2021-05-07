@@ -18,6 +18,12 @@
 		10F44E6D2645F5D100CA1C98 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 10F44E6C2645F5D100CA1C98 /* FirebaseAuth */; };
 		10F44E6F2645F5D100CA1C98 /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 10F44E6E2645F5D100CA1C98 /* FirebaseStorageSwift-Beta */; };
 		10F44E712645F77B00CA1C98 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 10F44E702645F77B00CA1C98 /* GoogleService-Info.plist */; };
+		10F44E762645F97300CA1C98 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F44E732645F97300CA1C98 /* TabBar.swift */; };
+		10F44E772645F97300CA1C98 /* TabBarIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F44E742645F97300CA1C98 /* TabBarIcon.swift */; };
+		10F44E782645F97300CA1C98 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F44E752645F97300CA1C98 /* ViewRouter.swift */; };
+		10F44E7B2645F9C200CA1C98 /* AddStoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F44E7A2645F9C200CA1C98 /* AddStoryView.swift */; };
+		10F44E7D2645F9D600CA1C98 /* StoriesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F44E7C2645F9D600CA1C98 /* StoriesListView.swift */; };
+		10F44E832645FA3000CA1C98 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F44E822645FA3000CA1C98 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +58,12 @@
 		10F44E5A2645F20D00CA1C98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10F44E662645F32000CA1C98 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		10F44E702645F77B00CA1C98 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		10F44E732645F97300CA1C98 /* TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		10F44E742645F97300CA1C98 /* TabBarIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarIcon.swift; sourceTree = "<group>"; };
+		10F44E752645F97300CA1C98 /* ViewRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
+		10F44E7A2645F9C200CA1C98 /* AddStoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStoryView.swift; sourceTree = "<group>"; };
+		10F44E7C2645F9D600CA1C98 /* StoriesListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoriesListView.swift; sourceTree = "<group>"; };
+		10F44E822645FA3000CA1C98 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +119,9 @@
 		10F44E3A2645F20B00CA1C98 /* Firebase-SwiftUI-MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				10F44E722645F97300CA1C98 /* Navigation */,
+				10F44E792645F9A600CA1C98 /* Views */,
 				10F44E3B2645F20B00CA1C98 /* Firebase_SwiftUI_MVVMApp.swift */,
-				10F44E3D2645F20B00CA1C98 /* ContentView.swift */,
 				10F44E3F2645F20C00CA1C98 /* Assets.xcassets */,
 				10F44E442645F20C00CA1C98 /* Info.plist */,
 				10F44E702645F77B00CA1C98 /* GoogleService-Info.plist */,
@@ -141,6 +154,43 @@
 				10F44E5A2645F20D00CA1C98 /* Info.plist */,
 			);
 			path = "Firebase-SwiftUI-MVVMUITests";
+			sourceTree = "<group>";
+		};
+		10F44E722645F97300CA1C98 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				10F44E732645F97300CA1C98 /* TabBar.swift */,
+				10F44E742645F97300CA1C98 /* TabBarIcon.swift */,
+				10F44E752645F97300CA1C98 /* ViewRouter.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		10F44E792645F9A600CA1C98 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				10F44E3D2645F20B00CA1C98 /* ContentView.swift */,
+				10F44E7F2645FA0F00CA1C98 /* User */,
+				10F44E7E2645FA0400CA1C98 /* Story */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		10F44E7E2645FA0400CA1C98 /* Story */ = {
+			isa = PBXGroup;
+			children = (
+				10F44E7C2645F9D600CA1C98 /* StoriesListView.swift */,
+				10F44E7A2645F9C200CA1C98 /* AddStoryView.swift */,
+			);
+			path = Story;
+			sourceTree = "<group>";
+		};
+		10F44E7F2645FA0F00CA1C98 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				10F44E822645FA3000CA1C98 /* ProfileView.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +332,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10F44E782645F97300CA1C98 /* ViewRouter.swift in Sources */,
+				10F44E832645FA3000CA1C98 /* ProfileView.swift in Sources */,
+				10F44E7D2645F9D600CA1C98 /* StoriesListView.swift in Sources */,
+				10F44E772645F97300CA1C98 /* TabBarIcon.swift in Sources */,
+				10F44E7B2645F9C200CA1C98 /* AddStoryView.swift in Sources */,
+				10F44E762645F97300CA1C98 /* TabBar.swift in Sources */,
 				10F44E3E2645F20B00CA1C98 /* ContentView.swift in Sources */,
 				10F44E3C2645F20B00CA1C98 /* Firebase_SwiftUI_MVVMApp.swift in Sources */,
 			);
