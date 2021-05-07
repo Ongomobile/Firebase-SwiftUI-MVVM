@@ -25,6 +25,9 @@
 		10F44E7D2645F9D600CA1C98 /* StoriesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F44E7C2645F9D600CA1C98 /* StoriesListView.swift */; };
 		10F44E832645FA3000CA1C98 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F44E822645FA3000CA1C98 /* ProfileView.swift */; };
 		10F44E862646070B00CA1C98 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F44E852646070B00CA1C98 /* AuthenticationService.swift */; };
+		10F44E8E26460B1800CA1C98 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F44E8B26460B1800CA1C98 /* ImageManager.swift */; };
+		10F44E8F26460B1800CA1C98 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F44E8C26460B1800CA1C98 /* ImagePicker.swift */; };
+		10F44E9026460B1800CA1C98 /* UploadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F44E8D26460B1800CA1C98 /* UploadImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +69,9 @@
 		10F44E7C2645F9D600CA1C98 /* StoriesListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoriesListView.swift; sourceTree = "<group>"; };
 		10F44E822645FA3000CA1C98 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		10F44E852646070B00CA1C98 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		10F44E8B26460B1800CA1C98 /* ImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		10F44E8C26460B1800CA1C98 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		10F44E8D26460B1800CA1C98 /* UploadImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +130,8 @@
 				10F44E84264606CD00CA1C98 /* Services */,
 				10F44E722645F97300CA1C98 /* Navigation */,
 				10F44E792645F9A600CA1C98 /* Views */,
-				10F44E3B2645F20B00CA1C98 /* Firebase_SwiftUI_MVVMApp.swift */,
+				10F44E9126460B2D00CA1C98 /* App */,
+				10F44E8A26460B1800CA1C98 /* Utils */,
 				10F44E3F2645F20C00CA1C98 /* Assets.xcassets */,
 				10F44E442645F20C00CA1C98 /* Info.plist */,
 				10F44E702645F77B00CA1C98 /* GoogleService-Info.plist */,
@@ -202,6 +209,24 @@
 				10F44E852646070B00CA1C98 /* AuthenticationService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		10F44E8A26460B1800CA1C98 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				10F44E8B26460B1800CA1C98 /* ImageManager.swift */,
+				10F44E8C26460B1800CA1C98 /* ImagePicker.swift */,
+				10F44E8D26460B1800CA1C98 /* UploadImage.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		10F44E9126460B2D00CA1C98 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				10F44E3B2645F20B00CA1C98 /* Firebase_SwiftUI_MVVMApp.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,11 +369,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				10F44E782645F97300CA1C98 /* ViewRouter.swift in Sources */,
+				10F44E8E26460B1800CA1C98 /* ImageManager.swift in Sources */,
 				10F44E832645FA3000CA1C98 /* ProfileView.swift in Sources */,
 				10F44E7D2645F9D600CA1C98 /* StoriesListView.swift in Sources */,
+				10F44E9026460B1800CA1C98 /* UploadImage.swift in Sources */,
 				10F44E862646070B00CA1C98 /* AuthenticationService.swift in Sources */,
 				10F44E772645F97300CA1C98 /* TabBarIcon.swift in Sources */,
 				10F44E7B2645F9C200CA1C98 /* AddStoryView.swift in Sources */,
+				10F44E8F26460B1800CA1C98 /* ImagePicker.swift in Sources */,
 				10F44E762645F97300CA1C98 /* TabBar.swift in Sources */,
 				10F44E3E2645F20B00CA1C98 /* ContentView.swift in Sources */,
 				10F44E3C2645F20B00CA1C98 /* Firebase_SwiftUI_MVVMApp.swift in Sources */,
