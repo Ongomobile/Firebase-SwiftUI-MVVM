@@ -8,21 +8,26 @@
 
 import SwiftUI
 
-
 struct AddStoryView: View {
 
+    @EnvironmentObject var storyListVM: StoryListViewModel
     @EnvironmentObject var viewRouter: ViewRouter
+    @State private var sourceType: UIImagePickerController.SourceType = .photoLibrary
     
     @State var title = ""
     @State var storyText = ""
-      
+    @State var imgSelected: UIImage = UIImage(named: "addCameraImg")!
+    
+    @State var showAddPhotoSheet = false
+
+  
     var body: some View {
         NavigationView {
             ScrollView {
                 VStack {
                     Spacer()
                    
-                    Image(systemName: "camera")
+                    Image(uiImage: imgSelected)
                         .resizable()
                         .cornerRadius(4)
                         .frame(width: 200 , height: 200)
@@ -31,7 +36,7 @@ struct AddStoryView: View {
                    
                     HStack {
                         Spacer()
-                        Button(action: {}) {
+                        Button(action: {showAddPhotoSheet.toggle()}) {
                             Text("Add a photo")
                                 .foregroundColor(Color("BrandPrimary"))
                         }
@@ -59,11 +64,15 @@ struct AddStoryView: View {
                    
                 }
                 .padding()
+                .sheet(isPresented: $showAddPhotoSheet){
+                    ImagePicker(imageSelected: $imgSelected, sourceType: $sourceType)
+                }
                 .navigationTitle("Add A Story")
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button(action: {
+                           add()
                             viewRouter.currentPage = .stories
                         }) {
                             Text("Save")
@@ -81,10 +90,16 @@ struct AddStoryView: View {
             
         }
     }
+    
+    private func add() {
+        let imageData = imgSelected.jpegData(compressionQuality: 0.01)
+        let storyToAdd = Story(headline: title, bodyText: storyText, storyImage: imageData,createdAt: Date())
+        storyListVM.addStory(story: storyToAdd)
+    }
 }
 
-struct AddStoryView_Previews: PreviewProvider {
+struct NewStoryForm_Previews: PreviewProvider {
     static var previews: some View {
-        AddStoryView().environmentObject(ViewRouter())
+        AddStoryView().environmentObject(StoryListViewModel())
     }
 }

@@ -12,12 +12,14 @@ import Firebase
 struct Firebase_SwiftUI_MVVMApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @StateObject var viewRouter = ViewRouter()
+    @StateObject var storyListVM = StoryListViewModel()
 
     
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(viewRouter)
+                .environmentObject(storyListVM)
         }
     }
 }
