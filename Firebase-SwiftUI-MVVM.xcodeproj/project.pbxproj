@@ -28,6 +28,8 @@
 		10F44E8E26460B1800CA1C98 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F44E8B26460B1800CA1C98 /* ImageManager.swift */; };
 		10F44E8F26460B1800CA1C98 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F44E8C26460B1800CA1C98 /* ImagePicker.swift */; };
 		10F44E9026460B1800CA1C98 /* UploadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F44E8D26460B1800CA1C98 /* UploadImage.swift */; };
+		10F44E9826460BD900CA1C98 /* StoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F44E9526460BD900CA1C98 /* StoryRepository.swift */; };
+		10F44E9C26460C4F00CA1C98 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F44E9B26460C4F00CA1C98 /* Story.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		10F44E8B26460B1800CA1C98 /* ImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		10F44E8C26460B1800CA1C98 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		10F44E8D26460B1800CA1C98 /* UploadImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadImage.swift; sourceTree = "<group>"; };
+		10F44E9526460BD900CA1C98 /* StoryRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryRepository.swift; sourceTree = "<group>"; };
+		10F44E9B26460C4F00CA1C98 /* Story.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,10 +131,12 @@
 		10F44E3A2645F20B00CA1C98 /* Firebase-SwiftUI-MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				10F44E9126460B2D00CA1C98 /* App */,
+				10F44E9A26460C3300CA1C98 /* Models */,
+				10F44E9326460BD900CA1C98 /* Repositories */,
 				10F44E84264606CD00CA1C98 /* Services */,
 				10F44E722645F97300CA1C98 /* Navigation */,
 				10F44E792645F9A600CA1C98 /* Views */,
-				10F44E9126460B2D00CA1C98 /* App */,
 				10F44E8A26460B1800CA1C98 /* Utils */,
 				10F44E3F2645F20C00CA1C98 /* Assets.xcassets */,
 				10F44E442645F20C00CA1C98 /* Info.plist */,
@@ -227,6 +233,22 @@
 				10F44E3B2645F20B00CA1C98 /* Firebase_SwiftUI_MVVMApp.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		10F44E9326460BD900CA1C98 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				10F44E9526460BD900CA1C98 /* StoryRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		10F44E9A26460C3300CA1C98 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				10F44E9B26460C4F00CA1C98 /* Story.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -374,6 +396,8 @@
 				10F44E7D2645F9D600CA1C98 /* StoriesListView.swift in Sources */,
 				10F44E9026460B1800CA1C98 /* UploadImage.swift in Sources */,
 				10F44E862646070B00CA1C98 /* AuthenticationService.swift in Sources */,
+				10F44E9826460BD900CA1C98 /* StoryRepository.swift in Sources */,
+				10F44E9C26460C4F00CA1C98 /* Story.swift in Sources */,
 				10F44E772645F97300CA1C98 /* TabBarIcon.swift in Sources */,
 				10F44E7B2645F9C200CA1C98 /* AddStoryView.swift in Sources */,
 				10F44E8F26460B1800CA1C98 /* ImagePicker.swift in Sources */,
