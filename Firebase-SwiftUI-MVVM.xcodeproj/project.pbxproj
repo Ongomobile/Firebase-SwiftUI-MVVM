@@ -30,6 +30,7 @@
 		10F44E9026460B1800CA1C98 /* UploadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F44E8D26460B1800CA1C98 /* UploadImage.swift */; };
 		10F44E9826460BD900CA1C98 /* StoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F44E9526460BD900CA1C98 /* StoryRepository.swift */; };
 		10F44E9C26460C4F00CA1C98 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F44E9B26460C4F00CA1C98 /* Story.swift */; };
+		10F44E9F26460DD300CA1C98 /* StoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F44E9E26460DD300CA1C98 /* StoryViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		10F44E8D26460B1800CA1C98 /* UploadImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadImage.swift; sourceTree = "<group>"; };
 		10F44E9526460BD900CA1C98 /* StoryRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryRepository.swift; sourceTree = "<group>"; };
 		10F44E9B26460C4F00CA1C98 /* Story.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		10F44E9E26460DD300CA1C98 /* StoryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				10F44E84264606CD00CA1C98 /* Services */,
 				10F44E722645F97300CA1C98 /* Navigation */,
 				10F44E792645F9A600CA1C98 /* Views */,
+				10F44E9D26460D9400CA1C98 /* ViewModels */,
 				10F44E8A26460B1800CA1C98 /* Utils */,
 				10F44E3F2645F20C00CA1C98 /* Assets.xcassets */,
 				10F44E442645F20C00CA1C98 /* Info.plist */,
@@ -249,6 +252,14 @@
 				10F44E9B26460C4F00CA1C98 /* Story.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		10F44E9D26460D9400CA1C98 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				10F44E9E26460DD300CA1C98 /* StoryViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,6 +404,7 @@
 				10F44E782645F97300CA1C98 /* ViewRouter.swift in Sources */,
 				10F44E8E26460B1800CA1C98 /* ImageManager.swift in Sources */,
 				10F44E832645FA3000CA1C98 /* ProfileView.swift in Sources */,
+				10F44E9F26460DD300CA1C98 /* StoryViewModel.swift in Sources */,
 				10F44E7D2645F9D600CA1C98 /* StoriesListView.swift in Sources */,
 				10F44E9026460B1800CA1C98 /* UploadImage.swift in Sources */,
 				10F44E862646070B00CA1C98 /* AuthenticationService.swift in Sources */,
