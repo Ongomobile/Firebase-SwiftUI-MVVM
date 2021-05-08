@@ -20,7 +20,7 @@ struct ProfileView: View {
                 Spacer()
 
             }
-            Image(systemName: "camera")
+            Image("addCameraImg")
                 .resizable()
                 .cornerRadius(4)
                 .frame(width: 175, height: 175)

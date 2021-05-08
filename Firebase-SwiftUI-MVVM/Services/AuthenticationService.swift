@@ -13,6 +13,7 @@ class AuthenticationService: ObservableObject {
   @Published var user: User?
   private var authenticationStateHandler: AuthStateDidChangeListenerHandle?
 
+  static let instance = AuthenticationService()
   init() {
     addListeners()
   }
