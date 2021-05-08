@@ -87,8 +87,3 @@ struct StoryCardView: View {
     }
 }
 
-struct StoryView_Previews: PreviewProvider {
-    static var previews: some View {
-        StoryCardView(storyViewModel: StoryViewModel(story: Story(id: "1",headline: "", bodyText: "", userId: "", storyId: "", createdAt: Date())))
-    }
-}
