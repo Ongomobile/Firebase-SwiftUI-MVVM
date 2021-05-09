@@ -19,7 +19,8 @@ class StoryViewModel: ObservableObject, Identifiable {
     init(story: Story) {
         self.story = story
         
-        // set up binding for story between the stories id and the viewmodels id then store object in cancellables so it can be canceled later
+        // set up binding for story between the stories id and the viewmodels
+        //id then store object in cancellables so it can be canceled later
         $story
             .compactMap { $0.id }
             .assign(to: \.id, on: self)

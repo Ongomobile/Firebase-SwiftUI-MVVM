@@ -19,6 +19,36 @@ This Repository is a template for a SwiftUI App with MVVM architecture and repos
 
 ---
 
+## How To Use
+Note: This project uses Swift Package Manager to manage dependencies. Since the Firebase SDK is rather large, so it will take a little while.
+
+You will need to set up a Firebase project.
+
+Here is where you can get set up with [Firebase] (https://firebase.google.com/)
+
+1 Create account
+
+2 Add a Project
+
+3 Download the GoogleService-Info.plist file 
+
+Before you add the GoogleService-Info.plist file to your project, you should probably make sure it’s in a gitignore  file. One simple way to do that is go to Xcode Preferences then Source Control then select git and add GoogleService-Info.plist file to ignored files.
+
+4 Setup Authentication note this app uses Anonymous sign
+
+5 Setup Cloud Firestore
+I just selected test mode for now. You will need to change later to suit your needs.
+
+---
+
+## Refferences
+
+[Getting Started with Cloud Firestore and SwiftUI]( https://www.raywenderlich.com/11609977-getting-started-with-cloud-firestore-and-swiftui)
+
+[How To Create A Custom Tab Bar In SwiftUI](https://blckbirds.com/post/custom-tab-bar-in-swiftui/)
+
+[Firebase and SwiftUI’s New Application Lifecycle](https://medium.com/firebase-developers/firebase-and-the-new-swiftui-2-application-life-cycle-e568c9f744e9)
+
 ## License
 
 MIT License

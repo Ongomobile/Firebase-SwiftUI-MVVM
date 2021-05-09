@@ -37,8 +37,7 @@ class ImageManager {
     }
     
     func uploadStoryImage(storyID: String, image: Data, handler: @escaping (_ success: Bool) -> ()) {
-
-        // convert image to UIImage can force unwrap because a default image is passed
+        // convert image to UIImage can force unwrap because a default image is passed if no image selected
         let image = UIImage(data: image)!
         // Get the path where we will save the image
         let path = getStoryImagePath(storyID: storyID)
@@ -51,8 +50,6 @@ class ImageManager {
                 }
             }
         }
-
-
     }
     
     func downloadProfileImage(userID: String, handler: @escaping (_ image: UIImage?) -> ()) {

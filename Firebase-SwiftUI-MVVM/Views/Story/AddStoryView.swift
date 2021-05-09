@@ -72,7 +72,7 @@ struct AddStoryView: View {
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button(action: {
-                           add()
+                           addStory()
                             viewRouter.currentPage = .stories
                         }) {
                             Text("Save")
@@ -91,7 +91,7 @@ struct AddStoryView: View {
         }
     }
     
-    private func add() {
+    private func addStory() {
         let imageData = imgSelected.jpegData(compressionQuality: 0.01)
         let storyToAdd = Story(headline: title, bodyText: storyText, storyImage: imageData,createdAt: Date())
         storyListVM.addStory(story: storyToAdd)
