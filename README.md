@@ -6,7 +6,11 @@
 ---
 
 ## Description
-This Repository is a template for a SwiftUI App with MVVM architecture and repository to handle the Firebase data source. 
+
+SwiftUI is such a pleasure. When you combine it with Firebase, it’s so much easier now to build robust apps. I want to share my journey in building a simple social media app.
+Hopefully this repository will be useful for others. I am always open for feedback, and other contributors would be super cool.
+
+This app uses MVVM architecture and repository to handle the Firebase data source. 
 
 #### Technologies
 
