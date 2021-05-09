@@ -24,8 +24,6 @@ Note: This project uses Swift Package Manager to manage dependencies. Since the 
 
 You will need to set up a Firebase project.
 
-Here is where you can get set up with [Firebase] (https://firebase.google.com/)
-
 1 Create account
 
 2 Add a Project
@@ -43,11 +41,15 @@ I just selected test mode for now. You will need to change later to suit your ne
 
 ## Refferences
 
+[Firebase](https://firebase.google.com/)
+
 [Getting Started with Cloud Firestore and SwiftUI]( https://www.raywenderlich.com/11609977-getting-started-with-cloud-firestore-and-swiftui)
 
 [How To Create A Custom Tab Bar In SwiftUI](https://blckbirds.com/post/custom-tab-bar-in-swiftui/)
 
 [Firebase and SwiftUI’s New Application Lifecycle](https://medium.com/firebase-developers/firebase-and-the-new-swiftui-2-application-life-cycle-e568c9f744e9)
+
+---
 
 ## License
 
