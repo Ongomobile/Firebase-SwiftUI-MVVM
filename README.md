@@ -53,6 +53,8 @@ I just selected test mode for now. You will need to change later to suit your ne
 
 [Firebase and SwiftUI’s New Application Lifecycle](https://medium.com/firebase-developers/firebase-and-the-new-swiftui-2-application-life-cycle-e568c9f744e9)
 
+[Learning SwiftUI, MVVM and Firebase](http://bit.ly/medium-mvvm)
+
 ---
 
 ## License
