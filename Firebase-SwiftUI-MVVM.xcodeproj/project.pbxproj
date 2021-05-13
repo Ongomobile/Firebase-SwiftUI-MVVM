@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10155AFA264DA329001E615F /* StoryAuthorProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10155AF9264DA329001E615F /* StoryAuthorProfileView.swift */; };
 		10F44E3C2645F20B00CA1C98 /* Firebase_SwiftUI_MVVMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F44E3B2645F20B00CA1C98 /* Firebase_SwiftUI_MVVMApp.swift */; };
 		10F44E3E2645F20B00CA1C98 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F44E3D2645F20B00CA1C98 /* ContentView.swift */; };
 		10F44E402645F20C00CA1C98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10F44E3F2645F20C00CA1C98 /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		10155AF9264DA329001E615F /* StoryAuthorProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryAuthorProfileView.swift; sourceTree = "<group>"; };
 		10F44E382645F20B00CA1C98 /* Firebase-SwiftUI-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Firebase-SwiftUI-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		10F44E3B2645F20B00CA1C98 /* Firebase_SwiftUI_MVVMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase_SwiftUI_MVVMApp.swift; sourceTree = "<group>"; };
 		10F44E3D2645F20B00CA1C98 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 				10F44EA62646129A00CA1C98 /* EditStoryView.swift */,
 				10F44E7C2645F9D600CA1C98 /* StoriesListView.swift */,
 				10F44EA42646126400CA1C98 /* StoryCardView.swift */,
+				10155AF9264DA329001E615F /* StoryAuthorProfileView.swift */,
 			);
 			path = Story;
 			sourceTree = "<group>";
@@ -423,6 +426,7 @@
 				10F44E9C26460C4F00CA1C98 /* Story.swift in Sources */,
 				10F44E772645F97300CA1C98 /* TabBarIcon.swift in Sources */,
 				10F44E8F26460B1800CA1C98 /* ImagePicker.swift in Sources */,
+				10155AFA264DA329001E615F /* StoryAuthorProfileView.swift in Sources */,
 				10F44EA126460F4900CA1C98 /* AddStoryView.swift in Sources */,
 				10F44EA326460F9000CA1C98 /* StoryListViewModel.swift in Sources */,
 				10F44E762645F97300CA1C98 /* TabBar.swift in Sources */,
