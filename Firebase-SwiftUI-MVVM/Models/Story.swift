@@ -1,12 +1,4 @@
-//
-//  StoryModel.swift
-//  ThaiStories
-//
-//  Created by Michael Haslam on 3/2/21.
-//
 
-//MIT License
-//
 //Copyright (c) [2021] [Michael Haslam]
 //
 //Permission is hereby granted, free of charge, to any person obtaining a copy

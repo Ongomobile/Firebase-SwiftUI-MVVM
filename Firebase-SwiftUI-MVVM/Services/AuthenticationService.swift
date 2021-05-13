@@ -1,10 +1,4 @@
-//
-//  AuthenticationService.swift
-//  Firebase-SwiftUI-MVVM
-//
 
-//MIT License
-//
 //Copyright (c) [2021] [Michael Haslam]
 //
 //Permission is hereby granted, free of charge, to any person obtaining a copy

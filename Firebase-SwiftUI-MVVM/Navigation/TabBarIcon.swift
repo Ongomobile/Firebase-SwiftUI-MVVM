@@ -1,11 +1,4 @@
-//
-//  TabBarIcon.swift
-//  ThaiFoody
-//
-//  Created by Michael Haslam on 4/16/21.
-//
-//MIT License
-//
+
 //Copyright (c) [2021] [Michael Haslam]
 //
 //Permission is hereby granted, free of charge, to any person obtaining a copy

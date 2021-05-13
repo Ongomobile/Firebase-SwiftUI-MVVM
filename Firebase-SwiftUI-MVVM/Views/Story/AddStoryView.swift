@@ -1,9 +1,3 @@
-//
-//  AddStoryView.swift
-//  ThaiStories
-//
-//  Created by Michael Haslam on 3/7/21.
-//
 
 //MIT License
 //
