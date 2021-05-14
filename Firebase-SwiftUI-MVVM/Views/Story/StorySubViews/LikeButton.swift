@@ -26,24 +26,28 @@ struct LikeButton : View {
     @State var scale : CGFloat = 1
     @State var opacity  = 0.0
     
+    let btnAction: () -> Void
+
     var body: some View {
-        ZStack {
-            Image(systemName: "heart.fill")
-                .font(.title3)
-                .opacity(isPressed ? 1 : 0)
-                .scaleEffect(isPressed ? 1.0 : 0.1)
-                .animation(.linear)
-            Image(systemName: "heart")
-                .font(.title3)
-                .foregroundColor(Color("BrandPrimary"))
-        }.font(.system(size: 40))
-        .onTapGesture {
-                 isPressed.toggle()
-                 withAnimation (.linear(duration: 0.2)) {
-                      scale = self.scale == 1 ? 1.3 : 1
-                      opacity = self.opacity == 0 ? 1 : 0
-                  }
-         }
+        Button(action:{
+            btnAction()
+            isPressed.toggle()
+            withAnimation (.linear(duration: 0.2)) {
+                scale = self.scale == 1 ? 1.3 : 1
+                opacity = self.opacity == 0 ? 1 : 0
+            }
+        }){
+            ZStack {
+                Image(systemName: "heart.fill")
+                    .font(.title3)
+                    .opacity(isPressed ? 1 : 0)
+                    .scaleEffect(isPressed ? 1.0 : 0.1)
+                    .animation(.linear)
+                Image(systemName: "heart")
+                    .font(.title3)
+                    .foregroundColor(Color("BrandPrimary"))
+            }.font(.system(size: 40))
+        }
         .scaleEffect(scale)
         .foregroundColor(isPressed ? .red : .white)
     }
@@ -51,6 +55,6 @@ struct LikeButton : View {
 
 struct LikeButton_Previews: PreviewProvider {
     static var previews: some View {
-        LikeButton()
+        LikeButton(btnAction: {})
     }
 }

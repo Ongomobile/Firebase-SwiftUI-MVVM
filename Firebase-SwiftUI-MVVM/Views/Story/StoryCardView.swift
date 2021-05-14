@@ -74,7 +74,7 @@ struct StoryCardView: View {
                 .aspectRatio(contentMode: .fit)
             
             HStack {
-                LikeButton()
+                LikeButton(btnAction: handleButttonTap)
                 Button(action: {}) {
                     Image(systemName: "bubble.right")
                         .font(.title3)
@@ -114,6 +114,9 @@ struct StoryCardView: View {
         .background(Color.white)
         .cornerRadius(4)
         .shadow(color: Color("BrandPrimary").opacity(0.15), radius: 30, x: 0, y: 2)
+    }
+    private  func handleButttonTap(){
+        print("Like Button tapped")
     }
 }
 
