@@ -74,12 +74,7 @@ struct StoryCardView: View {
                 .aspectRatio(contentMode: .fit)
             
             HStack {
-                Button(action: {}) {
-                    Image(systemName: "heart")
-                        .font(.title3)
-                        .foregroundColor(Color("BrandPrimary"))
-
-                }
+                LikeButton()
                 Button(action: {}) {
                     Image(systemName: "bubble.right")
                         .font(.title3)

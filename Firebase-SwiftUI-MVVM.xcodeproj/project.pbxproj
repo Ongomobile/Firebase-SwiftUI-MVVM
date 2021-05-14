@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		10155AFA264DA329001E615F /* StoryAuthorProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10155AF9264DA329001E615F /* StoryAuthorProfileView.swift */; };
 		10155AFC264DA8CE001E615F /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10155AFB264DA8CE001E615F /* AppUser.swift */; };
+		10155B02264DF4EE001E615F /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10155B01264DF4EE001E615F /* LikeButton.swift */; };
 		10F44E3C2645F20B00CA1C98 /* Firebase_SwiftUI_MVVMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F44E3B2645F20B00CA1C98 /* Firebase_SwiftUI_MVVMApp.swift */; };
 		10F44E3E2645F20B00CA1C98 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F44E3D2645F20B00CA1C98 /* ContentView.swift */; };
 		10F44E402645F20C00CA1C98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10F44E3F2645F20C00CA1C98 /* Assets.xcassets */; };
@@ -58,6 +59,7 @@
 /* Begin PBXFileReference section */
 		10155AF9264DA329001E615F /* StoryAuthorProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryAuthorProfileView.swift; sourceTree = "<group>"; };
 		10155AFB264DA8CE001E615F /* AppUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
+		10155B01264DF4EE001E615F /* LikeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
 		10F44E382645F20B00CA1C98 /* Firebase-SwiftUI-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Firebase-SwiftUI-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		10F44E3B2645F20B00CA1C98 /* Firebase_SwiftUI_MVVMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase_SwiftUI_MVVMApp.swift; sourceTree = "<group>"; };
 		10F44E3D2645F20B00CA1C98 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -119,6 +121,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10155B00264DF4D9001E615F /* StorySubViews */ = {
+			isa = PBXGroup;
+			children = (
+				10155B01264DF4EE001E615F /* LikeButton.swift */,
+			);
+			path = StorySubViews;
+			sourceTree = "<group>";
+		};
 		10F44E2F2645F20B00CA1C98 = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +218,7 @@
 		10F44E7E2645FA0400CA1C98 /* Story */ = {
 			isa = PBXGroup;
 			children = (
+				10155B00264DF4D9001E615F /* StorySubViews */,
 				10F44EA026460F4900CA1C98 /* AddStoryView.swift */,
 				10F44EA62646129A00CA1C98 /* EditStoryView.swift */,
 				10F44E7C2645F9D600CA1C98 /* StoriesListView.swift */,
@@ -429,6 +440,7 @@
 				10F44E9C26460C4F00CA1C98 /* Story.swift in Sources */,
 				10F44E772645F97300CA1C98 /* TabBarIcon.swift in Sources */,
 				10F44E8F26460B1800CA1C98 /* ImagePicker.swift in Sources */,
+				10155B02264DF4EE001E615F /* LikeButton.swift in Sources */,
 				10155AFA264DA329001E615F /* StoryAuthorProfileView.swift in Sources */,
 				10F44EA126460F4900CA1C98 /* AddStoryView.swift in Sources */,
 				10F44EA326460F9000CA1C98 /* StoryListViewModel.swift in Sources */,
