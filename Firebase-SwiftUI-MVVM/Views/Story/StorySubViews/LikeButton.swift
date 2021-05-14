@@ -30,7 +30,6 @@ struct LikeButton : View {
         ZStack {
             Image(systemName: "heart.fill")
                 .font(.title3)
-                .foregroundColor(Color("BrandPrimary"))
                 .opacity(isPressed ? 1 : 0)
                 .scaleEffect(isPressed ? 1.0 : 0.1)
                 .animation(.linear)
@@ -39,16 +38,13 @@ struct LikeButton : View {
                 .foregroundColor(Color("BrandPrimary"))
         }.font(.system(size: 40))
         .onTapGesture {
-                 self.isPressed.toggle()
+                 isPressed.toggle()
                  withAnimation (.linear(duration: 0.2)) {
-                      self.scale = self.scale == 1 ? 1.3 : 1
-                      self.opacity = self.opacity == 0 ? 1 : 0
-                  }
-                  withAnimation {
-                      self.opacity = self.opacity == 0 ? 1 : 0
+                      scale = self.scale == 1 ? 1.3 : 1
+                      opacity = self.opacity == 0 ? 1 : 0
                   }
          }
-        .scaleEffect(self.scale)
+        .scaleEffect(scale)
         .foregroundColor(isPressed ? .red : .white)
     }
 }
