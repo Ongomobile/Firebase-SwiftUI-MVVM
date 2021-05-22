@@ -22,7 +22,7 @@
 import SwiftUI
 
 enum ActiveCardSheet: Identifiable {
-    case edit, showProfile
+    case edit, showProfile, comments
     
     var id: Int {
         hashValue
@@ -75,31 +75,27 @@ struct StoryCardView: View {
             
             HStack {
                 LikeButton(btnAction: handleButttonTap)
-                Button(action: {}) {
+                Text("\(storyViewModel.story.likeCount) Likes")
+                    .foregroundColor(Color("TextColor"))
+                Spacer()
+                Button(action: {activeCardSheet = .comments}) {
                     Image(systemName: "bubble.right")
                         .font(.title3)
                         .foregroundColor(Color("BrandPrimary"))
                 }
-               
-                Spacer()
-                Button(action: {showDetail.toggle()}) {
-                    Text("more...")
-                        .foregroundColor(Color("TextColor")).opacity(0.6)
-                        .font(.headline)
-                }
+            
+               Text("\(storyViewModel.story.comments!.count) Comments")
+                    .foregroundColor(Color("TextColor"))
             }
-            .padding(.top)
-            if showDetail {
+            .padding(.horizontal, 5)
+        
                 VStack (alignment: .leading, spacing: 5){
-                    Text("5 Likes")
                     Text(storyViewModel.story.headline ?? "")
                         .font(.title)
                         .foregroundColor(Color("TextColor"))
                     Text(storyViewModel.story.bodyText ?? "")
                 }
                 .padding(.top)
-            }
-          
         }
 
         .sheet(item: $activeCardSheet) { item  in
@@ -108,6 +104,8 @@ struct StoryCardView: View {
                 EditStoryView(storyViewModel: StoryViewModel(story: storyViewModel.story))
             case .showProfile:
                 StoryAuthorProfileView(storyUserID: storyViewModel.story.userId ?? "")
+            case .comments:
+                CommentList()
             }
         }
         .padding()

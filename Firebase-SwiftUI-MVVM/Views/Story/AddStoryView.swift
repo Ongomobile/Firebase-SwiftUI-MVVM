@@ -107,7 +107,7 @@ struct AddStoryView: View {
     
     private func addStory() {
         let imageData = imgSelected.jpegData(compressionQuality: 0.01)
-        let storyToAdd = Story(headline: title, bodyText: storyText, storyImage: imageData,createdAt: Date())
+        let storyToAdd = Story(headline: title, bodyText: storyText, storyImage: imageData, comments: [], createdAt: Date(), likeCount: 0)
         storyListVM.addStory(story: storyToAdd)
     }
 }
