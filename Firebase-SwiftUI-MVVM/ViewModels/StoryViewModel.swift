@@ -49,7 +49,7 @@ class StoryViewModel: ObservableObject, Identifiable {
         storyRepository.updateStory(story)
     }
     
-    func addComment(id: String, comment: String) {
+    func addComment(id: String, comment: Comment) {
         storyRepository.addComment(id: id, comment: comment)
     }
     

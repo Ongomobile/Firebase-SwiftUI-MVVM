@@ -31,7 +31,7 @@ struct CommentListView: View {
                 VStack(alignment: .leading, spacing: 50){
                     ForEach(storyViewModel.story.comments!, id: \.self) { comment in
                         HStack(alignment: .top, spacing: 15) {
-                            Text(comment)
+                            Text("\(comment.commentText)")
                             Spacer()
                         }
                     }
@@ -59,7 +59,8 @@ struct CommentListView: View {
     
     private func addComment() {
         guard let id = storyViewModel.story.id else { return }
-        storyViewModel.addComment(id: id, comment: text)
+        let newComment = Comment(id: id, userId: storyViewModel.story.userId ?? "", storyId: storyViewModel.story.storyId ?? "", commentText: text, createdAt: Date())
+        storyViewModel.addComment(id: id, comment: newComment)
     }
     
 }

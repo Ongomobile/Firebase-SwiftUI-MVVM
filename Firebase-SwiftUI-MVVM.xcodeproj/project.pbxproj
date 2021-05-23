@@ -12,6 +12,7 @@
 		10155B02264DF4EE001E615F /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10155B01264DF4EE001E615F /* LikeButton.swift */; };
 		102EFDC5265984D2004E20EC /* CommentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102EFDC4265984D2004E20EC /* CommentListView.swift */; };
 		102EFE0A2659CD71004E20EC /* AutoSizingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102EFE092659CD71004E20EC /* AutoSizingTextField.swift */; };
+		109B1322265B0A24001CA35B /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109B1321265B0A24001CA35B /* Comment.swift */; };
 		10F44E3C2645F20B00CA1C98 /* Firebase_SwiftUI_MVVMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F44E3B2645F20B00CA1C98 /* Firebase_SwiftUI_MVVMApp.swift */; };
 		10F44E3E2645F20B00CA1C98 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F44E3D2645F20B00CA1C98 /* ContentView.swift */; };
 		10F44E402645F20C00CA1C98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10F44E3F2645F20C00CA1C98 /* Assets.xcassets */; };
@@ -64,6 +65,7 @@
 		10155B01264DF4EE001E615F /* LikeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
 		102EFDC4265984D2004E20EC /* CommentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListView.swift; sourceTree = "<group>"; };
 		102EFE092659CD71004E20EC /* AutoSizingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoSizingTextField.swift; sourceTree = "<group>"; };
+		109B1321265B0A24001CA35B /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		10F44E382645F20B00CA1C98 /* Firebase-SwiftUI-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Firebase-SwiftUI-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		10F44E3B2645F20B00CA1C98 /* Firebase_SwiftUI_MVVMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase_SwiftUI_MVVMApp.swift; sourceTree = "<group>"; };
 		10F44E3D2645F20B00CA1C98 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 			children = (
 				10155AFB264DA8CE001E615F /* AppUser.swift */,
 				10F44E9B26460C4F00CA1C98 /* Story.swift */,
+				109B1321265B0A24001CA35B /* Comment.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -460,6 +463,7 @@
 				10F44EA326460F9000CA1C98 /* StoryListViewModel.swift in Sources */,
 				10155AFC264DA8CE001E615F /* AppUser.swift in Sources */,
 				102EFE0A2659CD71004E20EC /* AutoSizingTextField.swift in Sources */,
+				109B1322265B0A24001CA35B /* Comment.swift in Sources */,
 				10F44E762645F97300CA1C98 /* TabBar.swift in Sources */,
 				10F44E3E2645F20B00CA1C98 /* ContentView.swift in Sources */,
 				10F44E3C2645F20B00CA1C98 /* Firebase_SwiftUI_MVVMApp.swift in Sources */,

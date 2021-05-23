@@ -30,7 +30,7 @@ struct Story: Identifiable, Codable {
     var userId: String?
     var storyId: String?
     var storyImage: Data?
-    var comments: [String]?
+    var comments: [Comment]?
     var createdAt: Date
     var likeCount: Int
 }

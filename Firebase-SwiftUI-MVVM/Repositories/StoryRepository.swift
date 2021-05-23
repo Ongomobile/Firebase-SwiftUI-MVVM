@@ -137,11 +137,17 @@ class StoryRepository: ObservableObject {
         }
     }
     
-    func addComment(id: String, comment: String) {
+    func addComment(id: String, comment: Comment) {
+        let commentData: [String: Any] = [
+            "id" : comment.id as Any,
+            "userId" : comment.userId,
+            "storyId" : comment.storyId,
+            "commentText" : comment.commentText,
+            "createdAt" : comment.createdAt
+        ]
         store.collection(path).document(id).updateData([
-            "comments" : FieldValue.arrayUnion([comment])
+            "comments" : FieldValue.arrayUnion([commentData])
         ])
-        print("commment data passed", id , comment)
     }
     
 }
