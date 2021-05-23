@@ -11,7 +11,6 @@
 		10155AFC264DA8CE001E615F /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10155AFB264DA8CE001E615F /* AppUser.swift */; };
 		10155B02264DF4EE001E615F /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10155B01264DF4EE001E615F /* LikeButton.swift */; };
 		102EFDC5265984D2004E20EC /* CommentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102EFDC4265984D2004E20EC /* CommentListView.swift */; };
-		102EFDC7265984EB004E20EC /* AddCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102EFDC6265984EB004E20EC /* AddCommentView.swift */; };
 		102EFE0A2659CD71004E20EC /* AutoSizingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102EFE092659CD71004E20EC /* AutoSizingTextField.swift */; };
 		10F44E3C2645F20B00CA1C98 /* Firebase_SwiftUI_MVVMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F44E3B2645F20B00CA1C98 /* Firebase_SwiftUI_MVVMApp.swift */; };
 		10F44E3E2645F20B00CA1C98 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F44E3D2645F20B00CA1C98 /* ContentView.swift */; };
@@ -64,7 +63,6 @@
 		10155AFB264DA8CE001E615F /* AppUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
 		10155B01264DF4EE001E615F /* LikeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
 		102EFDC4265984D2004E20EC /* CommentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListView.swift; sourceTree = "<group>"; };
-		102EFDC6265984EB004E20EC /* AddCommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCommentView.swift; sourceTree = "<group>"; };
 		102EFE092659CD71004E20EC /* AutoSizingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoSizingTextField.swift; sourceTree = "<group>"; };
 		10F44E382645F20B00CA1C98 /* Firebase-SwiftUI-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Firebase-SwiftUI-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		10F44E3B2645F20B00CA1C98 /* Firebase_SwiftUI_MVVMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase_SwiftUI_MVVMApp.swift; sourceTree = "<group>"; };
@@ -139,7 +137,6 @@
 			isa = PBXGroup;
 			children = (
 				102EFDC4265984D2004E20EC /* CommentListView.swift */,
-				102EFDC6265984EB004E20EC /* AddCommentView.swift */,
 			);
 			path = Comment;
 			sourceTree = "<group>";
@@ -464,7 +461,6 @@
 				10155AFC264DA8CE001E615F /* AppUser.swift in Sources */,
 				102EFE0A2659CD71004E20EC /* AutoSizingTextField.swift in Sources */,
 				10F44E762645F97300CA1C98 /* TabBar.swift in Sources */,
-				102EFDC7265984EB004E20EC /* AddCommentView.swift in Sources */,
 				10F44E3E2645F20B00CA1C98 /* ContentView.swift in Sources */,
 				10F44E3C2645F20B00CA1C98 /* Firebase_SwiftUI_MVVMApp.swift in Sources */,
 				102EFDC5265984D2004E20EC /* CommentListView.swift in Sources */,

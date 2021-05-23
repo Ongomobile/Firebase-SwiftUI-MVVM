@@ -20,46 +20,46 @@
 
 import SwiftUI
 
-// Temporary data
-let comments = ["comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "last"]
-
 struct CommentListView: View {
-    @EnvironmentObject var viewRouter: ViewRouter
+    @State var story: Story
+    @State var containerHeight: CGFloat = 0
+    @State var text = ""
+    var storyViewModel: StoryViewModel
+    
     var body: some View {
-        NavigationView {
-            ZStack (alignment: .bottomLeading){
-                ScrollView {
-                    VStack(alignment: .leading, spacing: 50){
-                        ForEach(comments, id: \.self) { comment in
-                            HStack(alignment: .top, spacing: 15) {
-                                Text(comment)
-                            }
+        ZStack (alignment: .bottomLeading){
+            ScrollView {
+                VStack(alignment: .leading, spacing: 50){
+                    ForEach(story.comments!, id: \.self) { comment in
+                        HStack(alignment: .top, spacing: 15) {
+                            Text(comment)
+                            Spacer()
                         }
                     }
-                    .padding(.bottom, 80)
-                    .padding(.top, 50)
-                    .padding(.horizontal)
                 }
-                AddCommentView()
+                .padding(.bottom, 80)
+                .padding(.horizontal)
             }
-            .padding(.bottom, 30)
-            .navigationTitle("Comments")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button(action: {
-                        withAnimation {
-                            viewRouter.currentPage = .stories
-                        }
-                        
-                    }) {
-                        Text("Back")
-                    }
+            HStack {
+                AutoSizingTextField(hint: "Add Comment", text: $text, containerHeight: $containerHeight) {
+                    addComment()
+                    text = ""
+                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                 }
-                
+                .padding(.horizontal)
+                // Your Max Height Here....
+                .frame(height: containerHeight <= 120 ? containerHeight : 120)
+                .background(Color("BrandPrimary").opacity(0.05))
+                .cornerRadius(10)
+                .padding()
             }
+            .background(Color.white)
         }
-        
+        .padding(.bottom, 30)
     }
+    private func addComment() {
+        guard let id = story.id else { return }
+        storyViewModel.addComment(id: id, comment: text)
+    }
+    
 }
-

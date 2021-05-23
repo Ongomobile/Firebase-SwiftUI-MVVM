@@ -24,13 +24,16 @@ import SwiftUI
 struct StoriesListView: View {
     @EnvironmentObject var storyListVM: StoryListViewModel
     var body: some View {
-        ScrollView {
-            VStack (spacing: 20){
-                ForEach(storyListVM.storyViewModels) { storyViewModel in
-                    StoryCardView(storyViewModel: storyViewModel)
+        NavigationView {
+            ScrollView {
+                VStack (spacing: 20){
+                    ForEach(storyListVM.storyViewModels) { storyViewModel in
+                        StoryCardView(storyViewModel: storyViewModel)
+                    }
                 }
+                .padding()
             }
-            .padding()
+            .navigationBarHidden(true)
         }
     }
 }

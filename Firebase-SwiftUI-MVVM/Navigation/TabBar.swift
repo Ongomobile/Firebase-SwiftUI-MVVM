@@ -36,8 +36,6 @@ struct TabBar: View {
                         ProfileView()
                     case .addStory:
                         AddStoryView()
-                    case .comments:
-                        CommentListView()
                     }
                     Spacer()
                     ZStack {

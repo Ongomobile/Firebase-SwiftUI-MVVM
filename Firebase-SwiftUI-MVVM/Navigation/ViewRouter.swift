@@ -30,5 +30,4 @@ enum Page {
      case stories
      case profile
      case addStory
-     case comments
  }

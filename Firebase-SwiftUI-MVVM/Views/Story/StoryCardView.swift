@@ -79,12 +79,11 @@ struct StoryCardView: View {
                 Text("\(storyViewModel.story.likeCount) Likes")
                     .foregroundColor(Color("TextColor"))
                 Spacer()
-                Button(action: {viewRouter.currentPage = .comments}) {
+                NavigationLink(destination: CommentListView(story: storyViewModel.story, storyViewModel: storyViewModel)) {
                     Image(systemName: "bubble.right")
                         .font(.title3)
                         .foregroundColor(Color("BrandPrimary"))
                 }
-            
                Text("\(storyViewModel.story.comments!.count) Comments")
                     .foregroundColor(Color("TextColor"))
             }
