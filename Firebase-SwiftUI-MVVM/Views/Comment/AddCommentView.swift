@@ -41,6 +41,7 @@ struct AddCommentView: View {
             .cornerRadius(10)
             .padding()
         }
+        .background(Color.white)
     }
     
     private func addComment() {

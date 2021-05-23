@@ -20,7 +20,8 @@
 
 import SwiftUI
 
-let comments = ["comment1", "comment2", "comment3"]
+// Temporary data
+let comments = ["comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "comment3","comment1", "comment2", "last"]
 
 struct CommentListView: View {
     @EnvironmentObject var viewRouter: ViewRouter
@@ -35,6 +36,7 @@ struct CommentListView: View {
                             }
                         }
                     }
+                    .padding(.bottom, 80)
                     .padding(.top, 50)
                     .padding(.horizontal)
                 }
