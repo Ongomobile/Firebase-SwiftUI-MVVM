@@ -21,7 +21,6 @@
 import SwiftUI
 
 struct CommentListView: View {
-    @State var story: Story
     @State var containerHeight: CGFloat = 0
     @State var text = ""
     var storyViewModel: StoryViewModel
@@ -30,7 +29,7 @@ struct CommentListView: View {
         ZStack (alignment: .bottomLeading){
             ScrollView {
                 VStack(alignment: .leading, spacing: 50){
-                    ForEach(story.comments!, id: \.self) { comment in
+                    ForEach(storyViewModel.story.comments!, id: \.self) { comment in
                         HStack(alignment: .top, spacing: 15) {
                             Text(comment)
                             Spacer()
@@ -57,8 +56,9 @@ struct CommentListView: View {
         }
         .padding(.bottom, 30)
     }
+    
     private func addComment() {
-        guard let id = story.id else { return }
+        guard let id = storyViewModel.story.id else { return }
         storyViewModel.addComment(id: id, comment: text)
     }
     

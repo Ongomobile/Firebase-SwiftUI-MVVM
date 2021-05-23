@@ -31,14 +31,12 @@ enum ActiveCardSheet: Identifiable {
 
 
 struct StoryCardView: View {
-    @EnvironmentObject var viewRouter: ViewRouter
     @State private var storyImg: UIImage = UIImage(named: "addCameraImg")!
     @State private var authorImage: UIImage = UIImage(named: "authorImage")!
     @State private var showDetail = false
     @State private var showEditSheet = false
     @State var activeCardSheet: ActiveCardSheet?
 
-    
     var storyViewModel: StoryViewModel
     
     var body: some View {
@@ -79,7 +77,7 @@ struct StoryCardView: View {
                 Text("\(storyViewModel.story.likeCount) Likes")
                     .foregroundColor(Color("TextColor"))
                 Spacer()
-                NavigationLink(destination: CommentListView(story: storyViewModel.story, storyViewModel: storyViewModel)) {
+                NavigationLink(destination: CommentListView(storyViewModel: storyViewModel)) {
                     Image(systemName: "bubble.right")
                         .font(.title3)
                         .foregroundColor(Color("BrandPrimary"))
