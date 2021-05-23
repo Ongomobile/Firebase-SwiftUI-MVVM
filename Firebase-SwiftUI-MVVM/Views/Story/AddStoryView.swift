@@ -111,9 +111,3 @@ struct AddStoryView: View {
         storyListVM.addStory(story: storyToAdd)
     }
 }
-
-struct NewStoryForm_Previews: PreviewProvider {
-    static var previews: some View {
-        AddStoryView().environmentObject(StoryListViewModel())
-    }
-}

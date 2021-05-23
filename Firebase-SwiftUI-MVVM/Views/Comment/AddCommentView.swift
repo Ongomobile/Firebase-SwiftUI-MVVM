@@ -1,4 +1,3 @@
-
 //Copyright (c) [2021] [Michael Haslam]
 //
 //Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -21,14 +20,36 @@
 
 import SwiftUI
 
+struct AddCommentView: View {
+    @Environment(\.presentationMode) var presentationMode
+    // Auto Updating TextBox Height...
+    @State var containerHeight: CGFloat = 0
 
-class ViewRouter: ObservableObject {
-    @Published var currentPage: Page = .stories
+    @State var text: String = ""
+    
+    var body: some View {
+        HStack {
+            AutoSizingTextField(hint: "Add Comment", text: $text, containerHeight: $containerHeight) {
+                print("\(text) the is value from TextField")
+                text = ""
+                UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+            }
+            .padding(.horizontal)
+            // Your Max Height Here....
+            .frame(height: containerHeight <= 120 ? containerHeight : 120)
+            .background(Color("BrandPrimary").opacity(0.05))
+            .cornerRadius(10)
+            .padding()
+        }
+    }
+    
+    private func addComment() {
+        print("Add Comment Called")
+    }
 }
 
-enum Page {
-     case stories
-     case profile
-     case addStory
-     case comments
- }
+struct AddComment_Previews: PreviewProvider {
+    static var previews: some View {
+        AddCommentView()
+    }
+}

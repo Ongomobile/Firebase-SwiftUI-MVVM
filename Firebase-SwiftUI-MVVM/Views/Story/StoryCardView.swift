@@ -22,7 +22,7 @@
 import SwiftUI
 
 enum ActiveCardSheet: Identifiable {
-    case edit, showProfile, comments
+    case edit, showProfile
     
     var id: Int {
         hashValue
@@ -31,6 +31,7 @@ enum ActiveCardSheet: Identifiable {
 
 
 struct StoryCardView: View {
+    @EnvironmentObject var viewRouter: ViewRouter
     @State private var storyImg: UIImage = UIImage(named: "addCameraImg")!
     @State private var authorImage: UIImage = UIImage(named: "authorImage")!
     @State private var showDetail = false
@@ -78,7 +79,7 @@ struct StoryCardView: View {
                 Text("\(storyViewModel.story.likeCount) Likes")
                     .foregroundColor(Color("TextColor"))
                 Spacer()
-                Button(action: {activeCardSheet = .comments}) {
+                Button(action: {viewRouter.currentPage = .comments}) {
                     Image(systemName: "bubble.right")
                         .font(.title3)
                         .foregroundColor(Color("BrandPrimary"))
@@ -104,8 +105,6 @@ struct StoryCardView: View {
                 EditStoryView(storyViewModel: StoryViewModel(story: storyViewModel.story))
             case .showProfile:
                 StoryAuthorProfileView(storyUserID: storyViewModel.story.userId ?? "")
-            case .comments:
-                CommentList()
             }
         }
         .padding()
