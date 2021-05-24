@@ -41,9 +41,9 @@ struct CommentListView: View {
             }
             HStack {
                 AutoSizingTextField(hint: "Add Comment", text: $text, containerHeight: $containerHeight) {
+                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                     addComment()
                     text = ""
-                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                 }
                 .padding(.horizontal)
                 // Your Max Height Here....
@@ -58,6 +58,7 @@ struct CommentListView: View {
     }
     
     private func addComment() {
+        if text == "" {return}
         guard let id = storyViewModel.story.id else { return }
         let newComment = Comment(id: id, userId: storyViewModel.story.userId ?? "", storyId: storyViewModel.story.storyId ?? "", commentText: text, createdAt: Date())
         storyViewModel.addComment(id: id, comment: newComment)
