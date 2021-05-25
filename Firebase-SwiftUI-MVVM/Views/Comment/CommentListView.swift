@@ -28,16 +28,28 @@ struct CommentListView: View {
     var body: some View {
         ZStack (alignment: .bottomLeading){
             ScrollView {
-                VStack(alignment: .leading, spacing: 50){
-                    ForEach(storyViewModel.story.comments!, id: \.self) { comment in
-                        HStack(alignment: .top, spacing: 15) {
-                            Text("\(comment.commentText)")
-                            Spacer()
+                ScrollViewReader { scrollView in
+                    VStack(alignment: .leading, spacing: 50){
+                        ForEach(storyViewModel.story.comments!, id: \.self) { comment in
+                            HStack(alignment: .top, spacing: 15) {
+                                Text("\(comment.commentText)")
+                                Spacer()
+                            }
+                            .onTapGesture {
+                                print(comment.userId, AuthenticationService.instance.user?.uid)
+                            }
                         }
                     }
+                    .onChange(of: storyViewModel.story.comments, perform: { value in
+                        DispatchQueue.main.async {
+                            withAnimation {
+                                scrollView.scrollTo(storyViewModel.story.comments![storyViewModel.story.comments!.count - 1], anchor: .top)
+                            }
+                        }
+                    })
+                    .padding(.bottom, 80)
+                    .padding(.horizontal)
                 }
-                .padding(.bottom, 80)
-                .padding(.horizontal)
             }
             HStack {
                 AutoSizingTextField(hint: "Add Comment", text: $text, containerHeight: $containerHeight) {
