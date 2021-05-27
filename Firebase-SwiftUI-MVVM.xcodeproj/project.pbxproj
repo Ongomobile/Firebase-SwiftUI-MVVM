@@ -10,6 +10,8 @@
 		10155AFA264DA329001E615F /* StoryAuthorProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10155AF9264DA329001E615F /* StoryAuthorProfileView.swift */; };
 		10155AFC264DA8CE001E615F /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10155AFB264DA8CE001E615F /* AppUser.swift */; };
 		10155B02264DF4EE001E615F /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10155B01264DF4EE001E615F /* LikeButton.swift */; };
+		1020FEC82660494C0024D39F /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1020FEC72660494C0024D39F /* CommentView.swift */; };
+		1020FECA266049970024D39F /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1020FEC9266049970024D39F /* CommentViewModel.swift */; };
 		102EFDC5265984D2004E20EC /* CommentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102EFDC4265984D2004E20EC /* CommentListView.swift */; };
 		102EFE0A2659CD71004E20EC /* AutoSizingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102EFE092659CD71004E20EC /* AutoSizingTextField.swift */; };
 		109B1322265B0A24001CA35B /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109B1321265B0A24001CA35B /* Comment.swift */; };
@@ -63,6 +65,8 @@
 		10155AF9264DA329001E615F /* StoryAuthorProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryAuthorProfileView.swift; sourceTree = "<group>"; };
 		10155AFB264DA8CE001E615F /* AppUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
 		10155B01264DF4EE001E615F /* LikeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
+		1020FEC72660494C0024D39F /* CommentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
+		1020FEC9266049970024D39F /* CommentViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
 		102EFDC4265984D2004E20EC /* CommentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListView.swift; sourceTree = "<group>"; };
 		102EFE092659CD71004E20EC /* AutoSizingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoSizingTextField.swift; sourceTree = "<group>"; };
 		109B1321265B0A24001CA35B /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
@@ -138,6 +142,7 @@
 		102EFDC3265984B3004E20EC /* Comment */ = {
 			isa = PBXGroup;
 			children = (
+				1020FEC72660494C0024D39F /* CommentView.swift */,
 				102EFDC4265984D2004E20EC /* CommentListView.swift */,
 			);
 			path = Comment;
@@ -301,6 +306,7 @@
 			children = (
 				10F44EA226460F9000CA1C98 /* StoryListViewModel.swift */,
 				10F44E9E26460DD300CA1C98 /* StoryViewModel.swift */,
+				1020FEC9266049970024D39F /* CommentViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -460,8 +466,10 @@
 				10155B02264DF4EE001E615F /* LikeButton.swift in Sources */,
 				10155AFA264DA329001E615F /* StoryAuthorProfileView.swift in Sources */,
 				10F44EA126460F4900CA1C98 /* AddStoryView.swift in Sources */,
+				1020FECA266049970024D39F /* CommentViewModel.swift in Sources */,
 				10F44EA326460F9000CA1C98 /* StoryListViewModel.swift in Sources */,
 				10155AFC264DA8CE001E615F /* AppUser.swift in Sources */,
+				1020FEC82660494C0024D39F /* CommentView.swift in Sources */,
 				102EFE0A2659CD71004E20EC /* AutoSizingTextField.swift in Sources */,
 				109B1322265B0A24001CA35B /* Comment.swift in Sources */,
 				10F44E762645F97300CA1C98 /* TabBar.swift in Sources */,

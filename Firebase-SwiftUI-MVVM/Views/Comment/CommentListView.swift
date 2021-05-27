@@ -31,13 +31,7 @@ struct CommentListView: View {
                 ScrollViewReader { scrollView in
                     VStack(alignment: .leading, spacing: 50){
                         ForEach(storyViewModel.story.comments!, id: \.self) { comment in
-                            HStack(alignment: .top, spacing: 15) {
-                                Text("\(comment.commentText)")
-                                Spacer()
-                            }
-                            .onTapGesture {
-                                print(comment.userId, AuthenticationService.instance.user?.uid)
-                            }
+                            CommentView(storyId: storyViewModel.story.id ?? "", userComment: comment)
                         }
                     }
                     .onChange(of: storyViewModel.story.comments, perform: { value in

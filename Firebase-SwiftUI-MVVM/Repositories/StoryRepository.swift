@@ -150,4 +150,30 @@ class StoryRepository: ObservableObject {
         ])
     }
     
+    func deleteComment(docId: String,comment: Comment) {
+        print("ID here",docId)
+        print("Comment",comment)
+
+        let commentData: [String: Any] = [
+            "id" : comment.id,
+            "userId" : comment.userId,
+            "storyId" : comment.storyId,
+            "commentText" : comment.commentText,
+            "createdAt" : comment.createdAt
+        ]
+   
+        DispatchQueue.main.async {
+            self.store.collection(self.path).document(docId).updateData([
+                "comments" : FieldValue.arrayRemove([commentData])
+            ]) { error in
+                if let error = error {
+                    print("Unable to delete comment: \(error.localizedDescription)")
+                }  else {
+                    print("Successfully deleted comment")
+                }
+            }
+        }
+       
+    }
+    
 }
