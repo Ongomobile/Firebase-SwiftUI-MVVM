@@ -41,9 +41,11 @@ struct CommentListView: View {
                         }
                     }
                     .onChange(of: storyViewModel.story.comments, perform: { value in
-                        DispatchQueue.main.async {
-                            withAnimation {
-                                scrollView.scrollTo(storyViewModel.story.comments![storyViewModel.story.comments!.count - 1], anchor: .top)
+                        if  storyViewModel.story.comments!.count > 2 {
+                            DispatchQueue.main.async {
+                                withAnimation {
+                                    scrollView.scrollTo(storyViewModel.story.comments![storyViewModel.story.comments!.count - 1], anchor: .top)
+                                }
                             }
                         }
                     })
