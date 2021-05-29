@@ -20,19 +20,24 @@ struct CommentView: View {
     
     var body: some View {
         HStack(alignment: .top, spacing: 15) {
-            VStack {
-                Text("\(userComment.commentText)")
-                    .lineLimit(nil)
-                    .multilineTextAlignment(.leading)
-                    .padding()
-                
+            HStack {
+                VStack {
+                    Text("\(userComment.commentText)")
+                        .lineLimit(nil)
+                        .multilineTextAlignment(.leading)
+                        .padding()
+                    
+                }
+                .background(Color("BrandPrimary").opacity(0.05))
+                .cornerRadius(15)
+               
             }
-            .background(Color("BrandPrimary").opacity(0.05))
-            .cornerRadius(15)
-            .onTapGesture {
-                openActionSheet.toggle()
+            if AuthenticationService.instance.user?.uid == userComment.userId{
+              Text("...")
+                .onTapGesture {
+                    openActionSheet.toggle()
+                 }
             }
-            
             Spacer()
         }
         .actionSheet(isPresented: $openActionSheet) {

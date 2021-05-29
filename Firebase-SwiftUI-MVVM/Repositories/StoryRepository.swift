@@ -139,7 +139,7 @@ class StoryRepository: ObservableObject {
     
     func addComment(id: String, comment: Comment) {
         let commentData: [String: Any] = [
-            "id" : comment.id as Any,
+            "id" : comment.id,
             "userId" : comment.userId,
             "storyId" : comment.storyId,
             "commentText" : comment.commentText
