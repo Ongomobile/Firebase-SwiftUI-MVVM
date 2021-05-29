@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1011889D2662E2300065934F /* EditCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1011889C2662E2300065934F /* EditCommentView.swift */; };
 		10155AFA264DA329001E615F /* StoryAuthorProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10155AF9264DA329001E615F /* StoryAuthorProfileView.swift */; };
 		10155AFC264DA8CE001E615F /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10155AFB264DA8CE001E615F /* AppUser.swift */; };
 		10155B02264DF4EE001E615F /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10155B01264DF4EE001E615F /* LikeButton.swift */; };
@@ -62,6 +63,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1011889C2662E2300065934F /* EditCommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCommentView.swift; sourceTree = "<group>"; };
 		10155AF9264DA329001E615F /* StoryAuthorProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryAuthorProfileView.swift; sourceTree = "<group>"; };
 		10155AFB264DA8CE001E615F /* AppUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
 		10155B01264DF4EE001E615F /* LikeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			children = (
 				1020FEC72660494C0024D39F /* CommentView.swift */,
 				102EFDC4265984D2004E20EC /* CommentListView.swift */,
+				1011889C2662E2300065934F /* EditCommentView.swift */,
 			);
 			path = Comment;
 			sourceTree = "<group>";
@@ -472,6 +475,7 @@
 				1020FEC82660494C0024D39F /* CommentView.swift in Sources */,
 				102EFE0A2659CD71004E20EC /* AutoSizingTextField.swift in Sources */,
 				109B1322265B0A24001CA35B /* Comment.swift in Sources */,
+				1011889D2662E2300065934F /* EditCommentView.swift in Sources */,
 				10F44E762645F97300CA1C98 /* TabBar.swift in Sources */,
 				10F44E3E2645F20B00CA1C98 /* ContentView.swift in Sources */,
 				10F44E3C2645F20B00CA1C98 /* Firebase_SwiftUI_MVVMApp.swift in Sources */,

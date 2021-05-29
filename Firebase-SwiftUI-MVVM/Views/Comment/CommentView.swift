@@ -14,6 +14,9 @@ struct CommentView: View {
     
     @State var openActionSheet = false
     @State var showDeleteAlert = false
+    @State var showEditSheet = false
+    
+    
     let storyId: String?
     let userComment: Comment
   
@@ -45,7 +48,7 @@ struct CommentView: View {
                 .default(Text("Edit Comment")
                             .font(.title)
                             .foregroundColor(.purple)
-                         ,action: {print("Called edit comment")}),
+                         ,action: {showEditSheet.toggle()}),
                 .default(Text("Delete Comment"), action: {showDeleteAlert.toggle()}),
                 .cancel(Text("Cancel"), action: { })
                 
@@ -59,6 +62,9 @@ struct CommentView: View {
                     deleteComment()
                   }))
             
+        }
+        .sheet(isPresented:$showEditSheet  ){
+            EditCommentView(textToEdit: userComment.commentText)
         }
     }
     
