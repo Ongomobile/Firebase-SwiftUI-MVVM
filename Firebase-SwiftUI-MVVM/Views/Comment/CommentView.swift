@@ -20,31 +20,28 @@ struct CommentView: View {
     
     var body: some View {
         HStack(alignment: .top, spacing: 15) {
-        VStack {
-            Text("\(userComment.commentText)")
-                .lineLimit(nil)
-                .multilineTextAlignment(.leading)
-                .padding()
+            VStack {
+                Text("\(userComment.commentText)")
+                    .lineLimit(nil)
+                    .multilineTextAlignment(.leading)
+                    .padding()
+                
+            }
+            .background(Color("BrandPrimary").opacity(0.05))
+            .cornerRadius(15)
+            .onTapGesture {
+                openActionSheet.toggle()
+            }
             
-        }
-        .background(Color("BrandPrimary").opacity(0.05))
-        .cornerRadius(15)
-        .onTapGesture {
-            openActionSheet.toggle()
-        }
-        
-        Spacer()
-        }
-        .onTapGesture {
-            openActionSheet.toggle()
+            Spacer()
         }
         .actionSheet(isPresented: $openActionSheet) {
             ActionSheet(title: Text(""), buttons: [
                 .default(Text("Edit Comment")
                             .font(.title)
                             .foregroundColor(.purple)
-                         ,action: {}),
-                .destructive(Text("Delete Comment"), action: {showDeleteAlert.toggle()}),
+                         ,action: {print("Called edit comment")}),
+                .default(Text("Delete Comment"), action: {showDeleteAlert.toggle()}),
                 .cancel(Text("Cancel"), action: { })
                 
             ])

@@ -13,5 +13,4 @@ struct Comment: Identifiable, Codable, Hashable {
     var userId: String
     var storyId: String
     var commentText: String
-    var createdAt: Date
 }

@@ -68,7 +68,7 @@ struct CommentListView: View {
     private func addComment() {
         if text == "" {return}
         guard let id = storyViewModel.story.id else { return }
-        let newComment = Comment(id: id, userId: storyViewModel.story.userId ?? "", storyId: storyViewModel.story.storyId ?? "", commentText: text, createdAt: Date())
+        let newComment = Comment(id: id, userId: storyViewModel.story.userId ?? "", storyId: storyViewModel.story.storyId ?? "", commentText: text)
         storyViewModel.addComment(id: id, comment: newComment)
     }
     
