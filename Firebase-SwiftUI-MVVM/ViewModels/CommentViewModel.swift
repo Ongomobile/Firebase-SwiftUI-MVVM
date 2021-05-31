@@ -17,7 +17,6 @@ class CommentViewModel: ObservableObject, Identifiable {
     }
     
     func deleteComment(id: String, comment: Comment) {
-     
         storyRepository.deleteComment(docId: id, comment: comment)
     }
 }

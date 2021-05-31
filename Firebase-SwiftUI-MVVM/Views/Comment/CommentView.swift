@@ -12,11 +12,8 @@ struct CommentView: View {
     
     private let storyRepository = StoryRepository()
     
-    @State var openActionSheet = false
     @State var showDeleteAlert = false
-    @State var showEditSheet = false
-    
-    
+   
     let storyId: String?
     let userComment: Comment
   
@@ -38,33 +35,19 @@ struct CommentView: View {
             if AuthenticationService.instance.user?.uid == userComment.userId{
               Text("...")
                 .onTapGesture {
-                    openActionSheet.toggle()
+                    showDeleteAlert.toggle()
                  }
             }
             Spacer()
         }
-        .actionSheet(isPresented: $openActionSheet) {
-            ActionSheet(title: Text(""), buttons: [
-                .default(Text("Edit Comment")
-                            .font(.title)
-                            .foregroundColor(.purple)
-                         ,action: {showEditSheet.toggle()}),
-                .default(Text("Delete Comment"), action: {showDeleteAlert.toggle()}),
-                .cancel(Text("Cancel"), action: { })
-                
-            ])
-        }
         .alert(isPresented: $showDeleteAlert) {
-            Alert(title: Text("Are you sure?"),
+            Alert(title: Text("Are you sure you want to delete comment?"),
                   primaryButton: Alert.Button.cancel(),
                   
                   secondaryButton: Alert.Button.destructive(Text("Delete"), action: {
                     deleteComment()
                   }))
             
-        }
-        .sheet(isPresented:$showEditSheet  ){
-            EditCommentView(textToEdit: userComment.commentText)
         }
     }
     

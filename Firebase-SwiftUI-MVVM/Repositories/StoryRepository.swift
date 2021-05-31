@@ -162,7 +162,7 @@ class StoryRepository: ObservableObject {
                 "comments" : FieldValue.arrayRemove([commentData])
             ])
         }
-       
+        
     }
-    
+
 }
