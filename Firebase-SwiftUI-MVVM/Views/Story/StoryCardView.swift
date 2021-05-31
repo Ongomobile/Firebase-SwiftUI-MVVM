@@ -86,7 +86,7 @@ struct StoryCardView: View {
                 NavigationLink(destination: EmptyView()) {
                     EmptyView()
                 }
-               Text("\(storyViewModel.story.comments!.count) Comments")
+               Text("\(storyViewModel.story.comments?.count ?? 0) Comments")
                     .foregroundColor(Color("TextColor"))
             }
             .padding(.horizontal, 5)
