@@ -82,6 +82,10 @@ struct StoryCardView: View {
                         .font(.title3)
                         .foregroundColor(Color("BrandPrimary"))
                 }
+                // this prevents unwanted closing of comment view see developer.apple.com/forums/thread/677333?page=2
+                NavigationLink(destination: EmptyView()) {
+                    EmptyView()
+                }
                Text("\(storyViewModel.story.comments!.count) Comments")
                     .foregroundColor(Color("TextColor"))
             }

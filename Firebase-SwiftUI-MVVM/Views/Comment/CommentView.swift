@@ -17,7 +17,6 @@ struct CommentView: View {
     let storyId: String?
     let userComment: Comment
   
-    
     var body: some View {
         HStack(alignment: .top, spacing: 15) {
             HStack {
